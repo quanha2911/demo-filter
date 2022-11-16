@@ -1,0 +1,120 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+body.bg-overlay {
+    background-color: #00000045;
+}
+.gt_container {
+    position: relative;
+    font-size: 20px;
+}
+.gt_container .gt_menu {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ddd;
+    cursor: pointer;
+    margin-top: 50px;
+    width: 400px;
+    justify-content: space-between;
+}
+.gt_container .gt_menu.hide {
+    display: none;
+}
+.gt_container .gt_menu .gt_menu-text {
+    padding-left: 10px;
+}
+.gt_container .gt_menu .fa-sliders {
+    padding-right: 10px;
+}
+.gt_container .gt_menu-fix {
+    left: -400px;
+    width: 400px;
+    position: absolute;
+    border: 1px solid #ddd;
+    top: 0;
+    z-index: 11;
+    background: white;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.5s ease;
+}
+.gt_container .gt_menu-fix.show {
+    opacity: 1;
+    visibility: visible;
+    left: 55px;
+}
+.gt_container .gt_menu-fix .gt_menu-title {
+    position: relative;
+}
+.gt_container .gt_menu-fix .gt_menu-title .gt_menu-close {
+    position: absolute;
+    top: 0;
+    left: -14%;
+}
+.gt_container .gt_menu-fix .gt_menu-title .gt_menu-close .fa-times {
+    font-size: 32px;
+    padding: 15px;
+    background: black;
+    color: white;
+    cursor: pointer;
+}
+.gt_container .gt_menu-fix .gt_menu-link {
+    padding: 0px 16px;
+    height: 530px;
+    overflow: hidden;
+    overflow-y: scroll;
+}
+.gt_container .gt_menu-fix .gt_menu-title p {
+    text-align: center;
+    font-weight: 600;
+    border-bottom: 1px solid #ddd;
+    padding: 20px 0px;
+    margin: 0;
+    position: relative;
+}
+.gt_container .gt_menu-fix .gt_menu-link .gt_menu-item {
+    padding: 20px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #ddd;
+}
+.gt_container .gt_menu-fix .gt_menu-link .gt_menu-item:last-child {
+    border: none;
+}
+
+.gt_container .gt_menu-fix .gt_menu-link .gt_menu-item a {
+    text-decoration: none;
+    display: block;
+    color: black;
+    text-transform: uppercase;
+    line-height: 22px;
+}
+.gt_container .gt_menu-fix .gt_menu-link .gt_menu-item .fa-angle-right {
+    font-size: 25px;
+}
+.gt_container .gt_menu-fix .gt_menu-botton button {
+    width: 100%;
+    padding: 20px 15px;
+    font-size: 20px;
+    background: black;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+@media (max-width: 992px) {
+    .gt_container .gt_menu {
+        width: 100%;
+        justify-content: space-between;
+    }
+}
+@media (max-width: 576px) {
+    .gt_container .gt_menu-fix {
+        width: 260px;
+    }
+    .gt_container .gt_menu-fix .gt_menu-title .gt_menu-close{
+        left: -21%;
+    }
+}
